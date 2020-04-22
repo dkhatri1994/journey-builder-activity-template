@@ -74,7 +74,6 @@ define([
             "emailAddress": "{{Contact.Attribute.PostcardJourney.EmailAddress}}"
         }];
          payload['arguments'].execute.outArguments = [{
-             "tokens": authTokens,
             "foundSignupDate": 'THIS is output-200',
         }];
         
