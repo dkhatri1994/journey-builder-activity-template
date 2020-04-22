@@ -27,10 +27,7 @@ define([
    
     function onRender() {
         // JB will respond the first time 'ready' is called with 'initActivity'
-        connection.trigger('ready');
-
-        connection.trigger('requestTokens');
-        connection.trigger('requestEndpoints');
+       
         // Disable the next button if a value isn't selected
         $('#select1').change(function() {
             var message = getMessage();
@@ -47,6 +44,10 @@ define([
 
             connection.trigger('updateSteps', steps);
         });
+        connection.trigger('ready');
+
+        connection.trigger('requestTokens');
+        connection.trigger('requestEndpoints');
     }
 
     function initialize(data) {
@@ -174,8 +175,10 @@ define([
         }];
         
         payload['metaData'].isConfigured = true;
-
-        console.log(payload);
+        payload['arguments'].execute.outArguments = [{
+            "foundSignupDate": 'THIS is output-200',
+        }];
+        console.log('payload',payload);
         connection.trigger('updateActivity', payload);
     }
  function getMessage() {
