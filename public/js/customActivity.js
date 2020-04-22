@@ -73,10 +73,6 @@ define([
             "tokens": authTokens,
             "emailAddress": "{{Contact.Attribute.PostcardJourney.EmailAddress}}"
         }];
-         payload['arguments'].execute.outArguments = [{
-            "foundSignupDate": 'THIS is output-200',
-        }];
-        
         payload['metaData'].isConfigured = true;
 
         console.log(payload);
