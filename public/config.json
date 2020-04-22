@@ -15,16 +15,8 @@
     },
     "arguments": {
         "execute": {
-           "inArguments":[
-				{
-                    "emailAddress": "{{Contact.Attribute.CustomActivity.EmailAddress}}"
-                }									
-			],
-         "outArguments": [
-      {
-          "foundSignupDate": "asd"
-      }
-      ],
+           "inArguments":[],
+         "outArguments": [],
           "url": "https://envxzuddvbiig.x.pipedream.net/journeybuilder/execute",
            "verb": "POST",
             "body": "",
